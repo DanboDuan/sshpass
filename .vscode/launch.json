@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug sshpass",
+            "program": "${workspaceFolder}/.build/debug/sshpass",
+            "args": [],
+            "cwd": "${workspaceFolder:sshpass}",
+            "preLaunchTask": "swift: Build Debug sshpass"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release sshpass",
+            "program": "${workspaceFolder}/.build/release/sshpass",
+            "args": [],
+            "cwd": "${workspaceFolder:sshpass}",
+            "preLaunchTask": "swift: Build Release sshpass"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test sshpass",
+            "program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
+            "args": [
+                ".build/debug/sshpassPackageTests.xctest"
+            ],
+            "cwd": "${workspaceFolder:sshpass}",
+            "preLaunchTask": "swift: Build All"
+        }
+    ]
+}
