@@ -10,14 +10,15 @@ import Foundation
 struct Main: ParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "sshpass",
-        abstract: "ssh tool for input password",
-        version: "1.0.0",
-        subcommands: [
-        ]
+        abstract: "auto handle password prompt for ssh commands",
+        version: "1.0.0"
     )
-
+    
+    @OptionGroup()
+    var options: Options
+    
     func run() throws {
-        print("helloword")
+        print(String(describing: options))
     }
 }
 
